@@ -1,0 +1,25 @@
+<h3 class="" style="text-align: center;"><b>Flight Details</b></h3>
+
+<table class="table table-info table-hover table table-bordered">
+    <tr>
+        <td>FlightId</td>
+        <td>FlightName</td>
+        <td>FlightClass</td>
+        <td>Capacity</td>
+        <td>Date</td>
+        <td>Arrival Timing</td>
+        <td>Departure Timing</td>
+    </tr>
+    <tr *ngFor="let t of flight">
+        <td >{{t.flightid}}</td>
+        <td>{{t.flightname}}</td>
+        <td>{{classes}}</td>
+        <td>{{t.capacity}}</td>
+        <td>{{t.date}}</td>
+        <td>{{t.timing}}</td>
+        <td>{{t.departureTime}}</td>
+        <td>
+            <button [routerLink]="['booking', t.flightid]" class="btn btn-primary" type="submit">Book</button>
+        </td>
+    </tr>
+</table>

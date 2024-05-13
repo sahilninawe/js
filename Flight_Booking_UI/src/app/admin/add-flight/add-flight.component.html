@@ -1,0 +1,97 @@
+<h3 class="" style="text-align: center;"><b>Flight Details</b></h3>
+
+<table class="table table-info table-hover table table-bordered">
+    <tr>
+        <td>FlightId</td>
+        <td>FlightName</td>
+        <td>FlightClass</td>
+        <td>Capacity</td>
+        <td>Date</td>
+        <td>Timing</td>
+        <td>DepartureTime</td>
+    </tr>
+    <tr *ngFor="let t of flights">
+        <td>{{t.flightid}}</td>
+        <td>{{t.flightname}}</td>
+        <td>{{t.flightclass}}</td>
+        <td>{{t.capacity}}</td>
+        <td>{{t.date}}</td>
+        <td>{{t.timing}}</td>
+        <td>{{t.departureTime}}</td>
+    </tr>
+</table>
+<form class="container">
+
+    <table class="table table-hover">
+        <tr>
+            <td class="change" >
+                <label>FlightId</label>
+            </td>
+            <td>  
+                <input type="number" [(ngModel)]="flight.flightid" [ngModelOptions]= "{standalone: true}" placeholder="Enter FlightId">
+            </td>
+        </tr>
+        <tr>
+            <td class="change" >
+                <label>FlightName</label>
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="flight.flightname" [ngModelOptions]= "{standalone: true}" placeholder="Enter FlightName">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label class="change" >FlightClass</label>
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="flight.flightclass" [ngModelOptions]= "{standalone: true}" placeholder="Enter FlightClass">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label class="change" >Flight Capacity</label>
+            </td>
+            <td>
+                <input type="number" [(ngModel)]="flight.capacity" [ngModelOptions]= "{standalone: true}" placeholder="Enter Capacity">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label class="change" >Date</label>
+            </td>
+            <td>
+                <input type="date" [(ngModel)]="flight.date" [ngModelOptions]= "{standalone: true}" placeholder="Enter Date">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label class="change" >Arrival Time</label>
+            </td>
+            <td>
+                <input type="time" [(ngModel)]="flight.timing" [ngModelOptions]= "{standalone: true}" placeholder="Enter Time">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label class="change" >Departure Time</label>
+            </td>
+            <td>
+                <input type="time" [(ngModel)]="flight.departureTime" [ngModelOptions]= "{standalone: true}" placeholder="Enter Time">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button type="reset" (click)="addFlight()" class="btn-primary">Add</button>
+            </td>
+            <td>
+                <button type="reset" (click)="editFlight()" class="btn-info">Edit</button>
+                <button type="reset" style="margin-left: 20px;" (click)="deleteflight()" class="btn-danger">Delete</button>
+            </td>
+        </tr>
+    </table>
+</form>

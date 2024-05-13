@@ -1,0 +1,78 @@
+/* #form2Example3cg{
+    margin-left: -305px;
+} */
+ 
+body {
+    /* background-image: url('your_image_url'); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+ 
+  .vh-100 {
+    height: 100vh;
+  }
+ 
+  .bg-image {
+    /* background-image: url('your_image_url'); */
+    background-size: cover;
+    background-position: center center;
+  }
+ 
+  .gradient-custom-3 {
+    /* fallback for old browsers */
+    /* background: linear-gradient(45deg, rgba(106, 17, 203, 1) 0%, rgba(37, 117, 252, 1) 100%); */
+    opacity: 0.85;
+  }
+ 
+  .card {
+    border-radius: 15px;
+    border: none;
+    background: rgba(255, 255, 255, 0.6);
+  }
+ 
+  .form-outline {
+    margin-bottom: 1rem;
+  }
+ 
+  .form-outline input[type="text"],
+  .form-outline input[type="email"],
+  .form-outline input[type="password"],
+  .form-outline input[type="number"],
+  .form-outline input[type="date"] {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+ 
+  .form-outline label {
+    font-weight: 400;
+  }
+ 
+  .form-outline input[type="text"]:focus,
+  .form-outline input[type="email"]:focus,
+  .form-outline input[type="password"]:focus,
+  .form-outline input[type="number"]:focus,
+  .form-outline input[type="date"]:focus {
+    box-shadow: none;
+  }
+ 
+  .btn-success {
+    background-color: #33b5e5;
+    border: none;
+    box-shadow: none;
+  }
+ 
+  .btn-success:hover {
+    background-color: #31a9b8;
+  }
+ 
+  .btn-success:focus {
+    box-shadow: none;
+    background-color: #2a88b6;
+  }
+ 
+  #account-text {
+    color: #000000 !important; /* Dark black color */
+  }
+ 
